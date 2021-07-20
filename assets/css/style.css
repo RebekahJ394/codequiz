@@ -10,15 +10,24 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
+    border: solid 5px black;
     background: linear-gradient(0deg, rgb(190, 191, 201) 0%, rgb(166, 219, 166) 63%);
 }
 .large-font {
     font-size: 45px;
-    margin-left: 15px;
+    margin-left: 30px;
     
+}
+p {
+    margin-bottom: 10px;
 }
 .start-button {
     align-self: center;
     margin-left:230px;
     font-size: 20px;
+    font-family: 'Uchen';
+}
+
+ul li {
+    list-style-type:none;
 }

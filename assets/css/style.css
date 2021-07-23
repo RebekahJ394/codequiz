@@ -41,6 +41,7 @@ ul li {
 }
 
 .quizbox {
+    display: none;
     width: 555px;
     background-color: white;
     border-radius: 10px;
@@ -82,3 +83,42 @@ ul li {
     display: block;
     font-weight: 500;
 }
+
+section #listofanswers li {
+    border:solid 2px rgb(210, 228, 210);
+    background-color: rgb(234, 245, 234);
+    margin-bottom: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+section #listofanswers li:hover{
+    color: #ffffff;
+    background-color: #95c57e;
+}
+
+#Finishedbox {
+    width: 555px;
+    background-color: white;
+    border-radius: 10px;
+    border:solid 2px black;
+    padding: 30px;
+    text-align: center;
+}
+
+ #finishedtext {
+    font-size: 20px;
+    font-weight: 600;
+}
+ #scoretext {
+     display: flex;
+     align-content: center;
+ }
+
+ #scoretext span {
+     font-weight: bold;
+     margin-left: 5px;
+     align-content: center;
+ }

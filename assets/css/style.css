@@ -10,8 +10,14 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    border: solid 5px black;
     background: linear-gradient(0deg, rgb(190, 191, 201) 0%, rgb(166, 219, 166) 63%);
+}
+
+.starterbox {
+    border: solid 2px  black;
+    border-radius: 10px;
+    background-color: white;
+    display: none;
 }
 .large-font {
     font-size: 45px;
@@ -20,14 +26,59 @@ body {
 }
 p {
     margin-bottom: 10px;
+    font-weight:600;
 }
 .start-button {
     align-self: center;
     margin-left:230px;
     font-size: 20px;
     font-family: 'Uchen';
+    cursor: pointer;
 }
 
 ul li {
     list-style-type:none;
+}
+
+.quizbox {
+    width: 555px;
+    background-color: white;
+    border-radius: 10px;
+    border:solid 2px black;
+    padding: 30px;
+}
+
+.quizbox header {
+    height:70px;
+    padding: 0 30px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+
+}
+
+.quizbox header .timer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:120px;
+    height: 40px;
+    font-weight: 700;
+
+
+}
+.quizbox section {
+    padding: 20px 30px 20px 20px;
+    text-align: center;
+}
+
+.quizbox section #questiontext {
+    font-weight: bold;
+    font-size: 25px;
+    
+}
+.quizbox section #listofanswers {
+    padding: 0 20px;
+    display: block;
+    font-weight: 500;
 }

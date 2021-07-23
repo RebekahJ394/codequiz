@@ -9,16 +9,28 @@
     </head>
     <body>
         <header>
+        <div class="starterbox">
         <h1 class="large-font">Coding Quiz Challenge</h1>
-        <p> To answer all the questions, please choice from the multiple choice answers. </p>
+        <p> To answer all the questions, please choose from the multiple choice answers. </p>
         <button class="start-button">Start</button>
+        </div>
         </header>
-        <div>
-            <ul id="questions">
-                <li id="answer1"></li>
-                <li id="answer2"></li>
-                <li id="answer3"></li>
-            </ul>
+        <div class="quizbox">
+            <header>
+            <div class="title"></div>
+            <div class="timer">
+                <div class="timertext">Time Left: </div>
+                <div class="seconds">75</div>
+            </div>
+        </header>
+            <section>
+                <div id=questiontext> What does HTML stand for? </div>
+                    <ul id=listofanswers>
+                        <li id="answer1">Hypertext Markup Language</li>
+                        <li id="answer2">Hyperlink Makeup Linguini </li>
+                        <li id="answer3">Hypertext Markup Preprocessor</li>
+                    </ul>
+            </section>
         </div>
         <script src="assets/js/script.js"></script>
     </body>

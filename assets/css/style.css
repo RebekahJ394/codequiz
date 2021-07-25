@@ -100,6 +100,7 @@ section #listofanswers li:hover{
 }
 
 #Finishedbox {
+    display: none;
     width: 555px;
     background-color: white;
     border-radius: 10px;
@@ -113,7 +114,7 @@ section #listofanswers li:hover{
     font-weight: 600;
 }
  #scoretext {
-     display: flex;
+     /* display: flex; */
      align-content: center;
  }
 
@@ -122,3 +123,43 @@ section #listofanswers li:hover{
      margin-left: 5px;
      align-content: center;
  }
+ #usernameinputbox,
+ #submitbutton {
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     margin: auto;
+     height: auto;;
+ }
+  #submitbutton {
+      cursor: pointer;
+      margin-top: 10px;
+  }
+   #submitbutton:hover {
+       color: #2cc517;
+   }
+    #resultsbox {
+        width: 555px;
+        background-color: white;
+        border-radius: 10px;
+        border:solid 2px black;
+        padding: 30px;
+    }
+    #results-title {
+        text-align: center;
+        font-size: 30px;
+    }
+    
+    #results-list,
+    #resultsbox button {
+        display: flex;
+        align-items: center;
+        margin: auto;
+        margin-top: 5px;
+    }
+     #resultsbox button {
+        cursor: pointer;
+     }
+    #resultsbox button:hover {
+        color: #2cc517;
+    }

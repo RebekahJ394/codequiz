@@ -14,22 +14,27 @@ body {
 }
 
 .starterbox {
+    width: 555px;
     border: solid 2px  black;
     border-radius: 10px;
     background-color: white;
-    display: none;
+    padding: 30px;
+    /* display: none; */
 }
 .large-font {
     font-size: 45px;
-    margin-left: 30px;
+    text-align: center;
     
 }
 p {
-    margin-bottom: 10px;
-    font-weight:600;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 30px;
+    /* margin-bottom: 10px; */
 }
 .start-button {
-    align-self: center;
+    display: flex;
+    align-items: center;
     margin-left:230px;
     font-size: 20px;
     font-family: 'Uchen';
@@ -47,6 +52,13 @@ ul li {
     border-radius: 10px;
     border:solid 2px black;
     padding: 30px;
+}
+
+ .quizbox.activeInfo {
+     z-index: 5;
+    opacity: 1;
+    pointer-events: auto;
+    transform:translate(-50%, -50%) scale (1);
 }
 
 .quizbox header {
@@ -139,6 +151,7 @@ section #listofanswers li:hover{
        color: #2cc517;
    }
     #resultsbox {
+        display: none;
         width: 555px;
         background-color: white;
         border-radius: 10px;

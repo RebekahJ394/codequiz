@@ -51,57 +51,87 @@ var questions = [
     },
 ];
 
-var startbutton = document.querySelector(".start-button");
-var starterbox = document.querySelector(".starterbox")
-var quizbox= document.querySelector(".quizbox")
-var finishedbox =document.querySelector('#finishedbox')
+var startButton = document.querySelector(".start-button");
+var starterBox = document.querySelector(".starterbox")
+var quizBox= document.querySelector(".quizbox")
+var finishedBox =document.querySelector('#finishedbox')
 var resultbox =document.querySelector('#resultsbox')
 var restartbutton= document.querySelector("#restart-button");
 
-var questionsection=document.getElementById("questiontext");
-var firstoption= document.getElementById("answer1");
-var secondoption= document.getElementById("answer2");
-var thirdoption= document.getElementById("answer3");
-var fourthoption= document.getElementById("answer4");
+var questionSection=document.getElementById("questiontext");
+var firstOption= document.getElementById("answer1");
+var secondOption= document.getElementById("answer2");
+var thirdOption= document.getElementById("answer3");
+var fourthOption= document.getElementById("answer4");
+
+var timeEl=document.getElementById("countdown");
+var timeLeft;
+
+var currentQuestion= {};
+
 // var correctAnswer= ();
 // fuction startGame() {
 
 // }
 console.log(questions[0])
-startbutton.addEventListener("click", function() {
+startButton.addEventListener("click", function() {
     playquiz();
 })
 
 function playquiz(){
     // quiz=setUpQuestions(setQuestion);
-    quizbox.style.removeProperty("display");
-    starterbox.setAttribute("style","display:none");
+    quizBox.style.removeProperty("display");
+    starterBox.setAttribute("style","display:none");
     setUpQuestions(1)
+    startTimer()
 }
 
 function setUpQuestions(){
-    questionsection.textContent = questions[0].question;
-    firstoption.textContent = questions[0].options[0];
-    secondoption.textContent = questions[0].options[1];
-    thirdoption.textContent = questions[0].options[2];
-    fourthoption.textContent = questions[0].options[3];
+    questionSection.textContent = questions[0].question;
+    firstOption.textContent = questions[0].options[0];
+    secondOption.textContent = questions[0].options[1];
+    thirdOption.textContent = questions[0].options[2];
+    fourthOption.textContent = questions[0].options[3];
     
 }
 
-firstoption.addEventListener("click", function() {
-    console.log("this was clicked")
-})
+// firstoption.addEventListener("click", function() {
+//      console.log("this was clicked")
+//     if (firstOption === questions[0].answer) {
+//         timeLeft+10;
+//     }
+
+//  })
+
+
 // function setUpQuestions() {
 
 // }
-// function startTimer () {
-//     var timeLeft=75
-// }
+function startTimer () {
+      timeLeft=75;
+ }
 
-// var timeInterval= setInterval(function) {
-//     timercount--;
+var timeInterval= setInterval(function () {
+     if (timeLeft > 1) {
+         timeEl.textContent = timeLeft;
+         timeLeft--;
+     } else if (timeLeft === 1) {
+        timeLeft--;
+     } else {
+         clearInterval(timeInterval);
+         timeEl.textContent='';
+     }
 
-// }
+ }, 1000)
+
+ 
+firstOption.addEventListener("click", function() {
+    console.log("this was clicked")
+   if (firstOption === questions[0].answer) {
+       timeLeft+10;
+   }
+
+})
 // function startTimer() {
 //     timeLeft= 10
 

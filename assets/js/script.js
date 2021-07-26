@@ -57,16 +57,28 @@ let questions = [
 ];
 
 var startbutton = document.querySelector(".start-button");
+var starterbox = document.querySelector(".starterbox")
 var quizbox= document.querySelector(".quizbox")
+var finishedbox =document.querySelector('#finishedbox')
+var resultbox =document.querySelector('#resultsbox')
 var restartbutton= document.querySelector("#restart-button");
 // var correctAnswer= ();
 // fuction startGame() {
 
 // }
 startbutton.addEventListener("click", function() {
-    quizbox.classList.add("activeinfo");
+    playquiz(questions);
 })
 
+function playquiz(setQuestion){
+    // quiz=setUpQuestions(setQuestion);
+    quizbox.style.removeProperty("display");
+    starterbox.setAttribute("style","display:none");
+}
+
+// function setUpQuestions() {
+
+// }
 // function startTimer () {
 //     var timeLeft=75
 // }

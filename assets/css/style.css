@@ -46,7 +46,6 @@ ul li {
 }
 
 .quizbox {
-    display: none;
     width: 555px;
     background-color: white;
     border-radius: 10px;
@@ -54,12 +53,12 @@ ul li {
     padding: 30px;
 }
 
- .quizbox.activeInfo {
+ /* .quizbox.activeInfo {
      z-index: 5;
     opacity: 1;
     pointer-events: auto;
     transform:translate(-50%, -50%) scale (1);
-}
+} */
 
 .quizbox header {
     height:70px;

@@ -1,4 +1,4 @@
-let questions = [
+var questions = [
     {
         numb:1,
         question: "What does HTML stand for?",
@@ -62,20 +62,31 @@ var quizbox= document.querySelector(".quizbox")
 var finishedbox =document.querySelector('#finishedbox')
 var resultbox =document.querySelector('#resultsbox')
 var restartbutton= document.querySelector("#restart-button");
+var questionsection=document.querySelector("#questiontext");
+var firstoption= document.querySelector("#answer1");
+var secondoption= document.querySelector("#answer2");
+var thirdoption= document.querySelector("#answer3");
+var fourthoption= document.querySelector("#answer4");
 // var correctAnswer= ();
 // fuction startGame() {
 
 // }
+console.log(questions[0])
 startbutton.addEventListener("click", function() {
     playquiz(questions);
 })
 
-function playquiz(setQuestion){
+function playquiz(){
     // quiz=setUpQuestions(setQuestion);
     quizbox.style.removeProperty("display");
     starterbox.setAttribute("style","display:none");
+    setUpQuestions(0)
 }
 
+function setUpQuestions(){
+    questionsection.textContent= questions.question;
+    
+}
 // function setUpQuestions() {
 
 // }

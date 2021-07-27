@@ -1,7 +1,7 @@
 var questions = [
     {
         question: "What does HTML stand for?",
-        answer: "Hyper Text Markup Language",
+        correctAnswer: "Hyper Text Markup Language",
         options: [
             "Hyper Text Markup Lingustics",
             "Heighted Text Makeup Langauge",
@@ -11,7 +11,7 @@ var questions = [
     },
     {
         question: "What does CSS stand for?",
-        answer: "Cascading Style Sheet",
+        correctAnswer: "Cascading Style Sheet",
         options: [
             "Capable Style Sheet",
             "Colorful Stylistic Sheet",
@@ -21,7 +21,7 @@ var questions = [
      },
     {
         question: "What does a String represent?",
-        answer: "Text",
+        correctAnswer: "Text",
         options: [
             "Numbers",
             "Text",
@@ -31,7 +31,7 @@ var questions = [
     },
     {
         question: "What's the most common title for your HTML code to be stored?",
-        answer: "index.html",
+        correctAnswer: "index.html",
         options: [
             "beginning.html",
             "introduction.code",
@@ -41,7 +41,7 @@ var questions = [
     },
         {
         question: "Who is considered the 'father of the computer'?",
-        answer: "Charles Babbage",
+        correctAnswer: "Charles Babbage",
         options: [
             "Albert Einstein",
             "Jeff Bezos",
@@ -66,20 +66,25 @@ var fourthOption= document.getElementById("answer4");
 
 var timeEl=document.getElementById("countdown");
 var timeLeft;
-
+var score = 0;
+var questionNum = 0;
 var currentQuestion= {};
+
+
 
 // var correctAnswer= ();
 // fuction startGame() {
 
 // }
-console.log(questions[0])
+
+console.log(questions)
 startButton.addEventListener("click", function() {
     playquiz();
 })
 
 function playquiz(){
     // quiz=setUpQuestions(setQuestion);
+    console.log("quiz started")
     quizBox.style.removeProperty("display");
     starterBox.setAttribute("style","display:none");
     setUpQuestions(1)
@@ -87,13 +92,16 @@ function playquiz(){
 }
 
 function setUpQuestions(){
-    questionSection.textContent = questions[0].question;
-    firstOption.textContent = questions[0].options[0];
-    secondOption.textContent = questions[0].options[1];
-    thirdOption.textContent = questions[0].options[2];
-    fourthOption.textContent = questions[0].options[3];
+    questionSection.textContent = questions[questionNum].question;
+    firstOption.textContent = questions[questionNum].options[0];
+    secondOption.textContent = questions[questionNum].options[1];
+    thirdOption.textContent = questions[questionNum].options[2];
+    fourthOption.textContent = questions[questionNum].options[3];
     
 }
+ console.log(questions[0].correctAnswer)
+ console.log(questions[0].options[3])
+ questions[0]
 
 // firstoption.addEventListener("click", function() {
 //      console.log("this was clicked")
@@ -109,7 +117,7 @@ function setUpQuestions(){
 // }
 function startTimer () {
       timeLeft=75;
- }
+ 
 
 var timeInterval= setInterval(function () {
      if (timeLeft > 1) {
@@ -120,25 +128,23 @@ var timeInterval= setInterval(function () {
      } else {
          clearInterval(timeInterval);
          timeEl.textContent='';
-     }
-
+     } 
  }, 1000)
-
+}
  
-firstOption.addEventListener("click", function() {
-    console.log("this was clicked")
-   if (firstOption === questions[0].answer) {
-       timeLeft+10;
+fourthOption.addEventListener("click", function() {
+    // console.log("this was clicked")
+    console.log(fourthOption.textContent)
+   if (fourthOption.textContent === questions[0].correctAnswer) {
+       score+=10;
+       console.log(score);
+   } else {
+       timeLeft= timeLeft - 10;
    }
-
+   questionNum += 1
+   // evaluate whether or not quiz is done
+   setUpQuestions()
+   // increment questionNumber
+   // run the function to render the next question
+   
 })
-// function startTimer() {
-//     timeLeft= 10
-
-//     timer= setInterval(function) {
-//         timerCount--
-//   if (timeLeft > 0)   {
-
-//   }   
-//     }
-// }

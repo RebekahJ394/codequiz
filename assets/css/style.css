@@ -111,7 +111,6 @@ section #listofanswers li:hover{
 }
 
 #Finishedbox {
-    display: none;
     width: 555px;
     background-color: white;
     border-radius: 10px;

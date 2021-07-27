@@ -135,16 +135,93 @@ var timeInterval= setInterval(function () {
 fourthOption.addEventListener("click", function() {
     // console.log("this was clicked")
     console.log(fourthOption.textContent)
-   if (fourthOption.textContent === questions[0].correctAnswer) {
+   if (fourthOption.textContent === questions[questionNum].correctAnswer) {
        score+=10;
        console.log(score);
    } else {
        timeLeft= timeLeft - 10;
    }
+      // increment questionNumber
    questionNum += 1
    // evaluate whether or not quiz is done
+   if (questionNum === 5) {
+       endOfGame()
+   }
+   else {
+       // run the function to render the next question
    setUpQuestions()
-   // increment questionNumber
-   // run the function to render the next question
-   
+   }
 })
+
+firstOption.addEventListener("click", function() {
+    // console.log("this was clicked")
+    console.log(firstOption.textContent)
+   if (firstOption.textContent === questions[questionNum].correctAnswer) {
+       score+=10;
+       console.log(score);
+   } else {
+       timeLeft= timeLeft - 10;
+   }
+      // increment questionNumber
+   questionNum += 1
+   // evaluate whether or not quiz is done
+   if (questionNum === 6) {
+       endOfGame()
+   }
+   else {
+       // run the function to render the next question
+   setUpQuestions()
+   }
+})
+
+secondOption.addEventListener("click", function() {
+    // console.log("this was clicked")
+    console.log(secondOption.textContent)
+   if (secondOption.textContent === questions[questionNum].correctAnswer) {
+       score+=10;
+       console.log(score);
+   } else {
+       timeLeft= timeLeft - 10;
+   }
+      // increment questionNumber
+   questionNum += 1
+   // evaluate whether or not quiz is done
+   if (questionNum === 6) {
+       endOfGame()
+   }
+   else {
+       // run the function to render the next question
+   setUpQuestions()
+   }
+})
+
+thirdOption.addEventListener("click", function() {
+    // console.log("this was clicked")
+    console.log(thirdOption.textContent)
+   if (thirdOption.textContent === questions[questionNum].correctAnswer) {
+       score+=10;
+       console.log(score);
+   } else {
+       timeLeft= timeLeft - 10;
+   }
+      // increment questionNumber
+   questionNum += 1
+   // evaluate whether or not quiz is done
+   if (questionNum === 6) {
+       endOfGame()
+   }
+   else {
+       // run the function to render the next question
+   setUpQuestions()
+   }
+})
+
+// firstOption.addEventListener("click", function() {
+//     if(firstOption.textContent === question[0].correctAnswer)
+// }
+
+function endOfGame() {
+    Finishedbox.style.removeProperty("display");
+    quizBox.setAttribute("style","display:none");
+}
+    
